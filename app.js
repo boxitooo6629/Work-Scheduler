@@ -9,7 +9,7 @@ $(document).ready(function(){
   $(".saveButton").on("click", function(){
 
   let timeID = $(this).parent().attr("id")
-  let value = $(this).siblings(".description").val();
+  let value = $(this).siblings("textarea").val();
 
 
   // localstorage data saved
@@ -27,10 +27,11 @@ $(document).ready(function(){
 function hourUpdate(){
   let currentHour = moment().hour();
 
- console.log ($(".time.block"))
+ console.log (currentHour);
   for(let i=0; i < $(".time.block").lenght; i++){
     console.log(i);
    let hour = parseInt($(".time.block")[i].getAttribute("id").split("-")[1])
+   console.log (hour);
    if(hour < currentHour) {
     $(".time.block")[i].classlist.add("past")
    } else if(hour === currentHour){
