@@ -3,7 +3,7 @@
 
 //let currentDay = moment().format("MMMM Do YYYY"); 
 
-
+console.log("hoi");
 $(document).ready(function(){
   //save btn click
   $(".saveButton").on("click", function(){
@@ -27,18 +27,19 @@ $(document).ready(function(){
 function hourUpdate(){
   let currentHour = moment().hour();
 
- 
-  for(let i=0; i < $(".time-block").lenght; i++){
-   let hour = parseInt($(".time-block")[i].getAttribute("id").split("-")[1])
+ console.log ($(".time.block"))
+  for(let i=0; i < $(".time.block").lenght; i++){
+    console.log(i);
+   let hour = parseInt($(".time.block")[i].getAttribute("id").split("-")[1])
    if(hour < currentHour) {
-    $(".time-block")[i].classlist.add("past")
+    $(".time.block")[i].classlist.add("past")
    } else if(hour === currentHour){
-    $(".time-block")[i].classlist.add("past")
-    $(".time-block")[i].classlist.remove("present") 
+    $(".time.block")[i].classlist.add("past")
+    $(".time.block")[i].classlist.remove("present") 
    } else {
-     $(".time-block")[i].classlist.remove("past")
-     $(".time-block")[i].classlist.remove("present")
-     $(".time-block")[i].classlist.add("future")
+     $(".time.block")[i].classlist.remove("past")
+     $(".time.block")[i].classlist.remove("present")
+     $(".time.block")[i].classlist.add("future")
    }
   }
 
