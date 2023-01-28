@@ -31,7 +31,7 @@ function hourUpdate(){
  let el = $(".time.block")
  el.each(function( index ) { 
   let hour = parseInt($( this ).attr("id").split("-")[1])
-  let textarea = $(this).siblings("textarea")
+  let textarea = $(this).find("textarea")
   if(hour < currentHour) {
      textarea.addClass("past")
    } else if(hour === currentHour){
@@ -59,7 +59,7 @@ $("#hour-15 textarea").val(localStorage.getItem("hour-15"))
 $("#hour-16 textarea").val(localStorage.getItem("hour-16"))
 $("#hour-17 textarea").val(localStorage.getItem("hour-17"))
 $("#hour-18 textarea").val(localStorage.getItem("hour-18"))
-
+ // display current date
 $("#currentDay").text(moment().format("dddd, MMMM, Do"))
 
 
