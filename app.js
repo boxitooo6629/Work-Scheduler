@@ -28,19 +28,21 @@ function hourUpdate(){
   let currentHour = moment().hour();
 
  console.log (currentHour);
-  for(let i=0; i < $(".time.block").lenght; i++){
+ let el = $(".time.block")
+  for(let i=0; i < el.length; i++){
+    
     console.log(i);
-   let hour = parseInt($(".time.block")[i].getAttribute("id").split("-")[1])
-   console.log (hour);
+   let hour = parseInt(el.get(i).getAttribute("id").split("-")[1])
+   console.log (el.get(i));
    if(hour < currentHour) {
-    $(".time.block")[i].classlist.add("past")
+    el.get(i).addClass("past")
    } else if(hour === currentHour){
-    $(".time.block")[i].classlist.add("past")
-    $(".time.block")[i].classlist.remove("present") 
+    el.get(i).addClass("past")
+    el.get(i).removeClass("present") 
    } else {
-     $(".time.block")[i].classlist.remove("past")
-     $(".time.block")[i].classlist.remove("present")
-     $(".time.block")[i].classlist.add("future")
+     el.get(i).removeClass("past")
+     el.get(i).removeClass("present")
+     el.get(i).addClass("future")
    }
   }
 
@@ -51,16 +53,16 @@ hourUpdate();
 // localstorage time date saved
 let interval = setInterval(hourUpdate, 15000);
 
-$("#hour-9 .description").val(localStorage.getItem("hour-9"))
-$("#hour-10 .description").val(localStorage.getItem("hour-10"))
-$("#hour-11 .description").val(localStorage.getItem("hour-11"))
-$("#hour-12 .description").val(localStorage.getItem("hour-12"))
-$("#hour-13 .description").val(localStorage.getItem("hour-13"))
-$("#hour-14 .description").val(localStorage.getItem("hour-14"))
-$("#hour-15 .description").val(localStorage.getItem("hour-15"))
-$("#hour-16 .description").val(localStorage.getItem("hour-16"))
-$("#hour-17 .description").val(localStorage.getItem("hour-17"))
-$("#hour-18 .description").val(localStorage.getItem("hour-18"))
+$("#hour-9 textarea").val(localStorage.getItem("hour-9"))
+$("#hour-10 textarea").val(localStorage.getItem("hour-10"))
+$("#hour-11 textarea").val(localStorage.getItem("hour-11"))
+$("#hour-12 textarea").val(localStorage.getItem("hour-12"))
+$("#hour-13 textarea").val(localStorage.getItem("hour-13"))
+$("#hour-14 textarea").val(localStorage.getItem("hour-14"))
+$("#hour-15 textarea").val(localStorage.getItem("hour-15"))
+$("#hour-16 textarea").val(localStorage.getItem("hour-16"))
+$("#hour-17 textarea").val(localStorage.getItem("hour-17"))
+$("#hour-18 textarea").val(localStorage.getItem("hour-18"))
 
 $("#currentDay").text(moment().format("dddd, MMMM, Do"))
 
