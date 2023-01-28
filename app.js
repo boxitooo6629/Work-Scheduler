@@ -29,23 +29,19 @@ function hourUpdate(){
 
  console.log (currentHour);
  let el = $(".time.block")
-  for(let i=0; i < el.length; i++){
-    
-    console.log(i);
-   let hour = parseInt(el.get(i).getAttribute("id").split("-")[1])
-   console.log (el.get(i));
-   if(hour < currentHour) {
-    el.get(i).addClass("past")
+ el.each(function( index ) { 
+  let hour = parseInt($( this ).attr("id").split("-")[1])
+  let textarea = $(this).siblings("textarea")
+  if(hour < currentHour) {
+     textarea.addClass("past")
    } else if(hour === currentHour){
-    el.get(i).addClass("past")
-    el.get(i).removeClass("present") 
-   } else {
-     el.get(i).removeClass("past")
-     el.get(i).removeClass("present")
-     el.get(i).addClass("future")
-   }
-  }
-
+     textarea.addClass("present") 
+    } else {
+     textarea.removeClass("past")
+     textarea.removeClass("present")
+     textarea.addClass("future")
+    }
+  });
 }
 
 hourUpdate();
