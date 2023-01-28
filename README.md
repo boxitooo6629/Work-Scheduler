@@ -1,87 +1,46 @@
 # Third-Party APIs: Work Day Scheduler
 
-## Your Task
+## Description
 
-Create a simple calendar application that allows a user to save events for each hour of the day by modifying starter code. This app will run in the browser and feature dynamically updated HTML and CSS powered by jQuery.
+This is simply online dairy for your daily jobs and things to do. It's very simple and practical shows with diffrent colours your past preset and future things to do!
 
-You'll need to use the [Moment.js](https://momentjs.com/) library to work with date and time. Be sure to read the documentation carefully and concentrate on using Moment.js in the browser.
 
-## User Story
-
-```md
-AS AN employee with a busy schedule
-I WANT to add important events to a daily planner
-SO THAT I can manage my time effectively
-```
- 
-## Acceptance Criteria
+## Visuals
 
 The app should:
-
-* Display the current day at the top of the calender when a user opens the planner.
- 
-* Present timeblocks for standard business hours when the user scrolls down.
- 
-* Color-code each timeblock based on past, present, and future when the timeblock is viewed.
- 
-* Allow a user to enter an event when they click a timeblock
-
-* Save the event in local storage when the save button is clicked in that timeblock.
-
-* Persist events between refreshes of a page
-
-The following animation demonstrates the application functionality:
 
 ![A user clicks on slots on the color-coded calendar and edits the events.](./images/05-third-party-apis-homework-demo.gif)
 
 
-## Grading Requirements
+## Installation
 
-This homework is graded based on the following criteria: 
+Simply open the website and type on the hours you refer to.
 
-### Technical Acceptance Criteria: 40%
+No installation is required!
 
-* Satisfies all of the above acceptance criteria plus the following:
+### Usage
 
-  * Uses a date utility library to work with date and time
+We are using [Moment.js](https://momentjs.com/) library to work with date and time abd jQuery [https://jqueryui.com/] to save time and be more efficient! 
 
-### Deployment: 32%
 
-* Application deployed at live URL
+### Support
 
-* Application loads with no errors
+If you have any questions please don't hesitate and contact blago.diskov@outlook.com.
 
-* Application GitHub URL submitted
+### Roadmap
 
-* GitHub repo contains application code
+Updates will be available very soon...!
 
-### Application Quality: 15%
+### Contributing
 
-* Application user experience is intuitive and easy to navigate
+if you want to make any changes or want to discuss please visit my github profile. [https://github.com/boxitooo6629]
 
-* Application user interface style is clean and polished
+## Authors and Acknowledgment
 
-* Application resembles the mock-up functionality provided in the homework instructions
-
-### Repository Quality: 13%
-
-* Repository has a unique name
-
-* Repository follows best practices for file structure and naming conventions
-
-* Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.
-
-* Repository contains multiple descriptive commit messages
-
-* Repository contains quality README file with description, screenshot, and link to deployed application
-
-## Review
-
-You are required to submit the following for review:
-
-* The URL of the deployed application
-
-* The URL of the GitHub repository, with a unique name and a README describing the project
-
----
 © 2023 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.
+Alameen Ipaya (TA) edX boot Camp
+Emil Geshy
+
+## License
+
+MIT license
