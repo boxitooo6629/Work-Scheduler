@@ -3,7 +3,7 @@
 
 //let currentDay = moment().format("MMMM Do YYYY"); 
 
-console.log("hoi");
+
 $(document).ready(function(){
   //save btn click
   $(".saveButton").on("click", function(){
@@ -27,7 +27,6 @@ $(document).ready(function(){
 function hourUpdate(){
   let currentHour = moment().hour();
 
- console.log (currentHour);
  let el = $(".time.block")
  el.each(function( index ) { 
   let hour = parseInt($( this ).attr("id").split("-")[1])
